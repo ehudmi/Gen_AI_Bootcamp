@@ -1,0 +1,13 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week1/day2/exerciseXP.py
+suggestions for improvement:
+- In Exercise 1, printing 'Hello world' five times could be achieved more efficiently with a loop instead of string multiplication.
+- Exercise 3 is missing the actual execution and output of the code snippets. It only provides predictions.  The code should show the execution and output.
+- Exercise 7 and 9:  The code directly uses user input without any error handling (e.g. what if the user enters text instead of a number?).  Add input validation.
+- Exercise 8 lacks creativity in the funny messages.  More imaginative responses based on name matching/mismatch would enhance the exercise.
+- In Exercise 4, the prompt asks to print a specific sentence with '<computer_brand>', but the code uses a slightly different phrasing.
+Brief justification:
+- correctness: The code generally addresses all exercises related to the chapter content.  However, some exercises lack completeness (Exercise 3) or robustness (Exercises 7 and 9).  The minor phrasing difference in Exercise 4 also slightly impacts correctness.
+- readability: The code is generally well-formatted and easy to understand. Variable names are descriptive and the logic is straightforward for most exercises.
+- performance: The code's performance is adequate for the given tasks.  No major performance bottlenecks are present.  The performance is optimal for the size and type of the task.
+- security: The code has a security vulnerability in that it directly uses untrusted user input without proper validation (Exercises 7, 9)  This makes it vulnerable to errors if the user enters unexpected data.  The lack of input validation is a serious omission.
+
