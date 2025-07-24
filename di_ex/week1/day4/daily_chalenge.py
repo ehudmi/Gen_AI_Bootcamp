@@ -71,15 +71,15 @@
 # For example, “ppoeemm” should become “poem” (removes consecutive duplicates like ‘pp’, ‘ee’, and ‘mm’).
 # 3. The program should print the modified string.
 
-user_string = input("Please enter a string\n")
-last_item = user_string[0]
-new_string = last_item
-for item in user_string:
-    if item != last_item:
-        new_string += item
-    last_item = item
+# user_string = input("Please enter a string\n")
+# last_item = user_string[0]
+# new_string = last_item
+# for item in user_string:
+#     if item != last_item:
+#         new_string += item
+#     last_item = item
 
-print(new_string)
+# print(new_string)
 
 
 # Example 1:

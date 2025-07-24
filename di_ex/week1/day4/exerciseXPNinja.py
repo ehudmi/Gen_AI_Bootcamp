@@ -125,26 +125,24 @@ paragraph = (
     "games outside of the Modern Warfare sub-series, Ghosts (2013) and Infinite Warfare (2016)"
 )
 
-print(f"The paragraph contains {len(paragraph)} characters")
-print(f"The paragraph contains {paragraph.count('.')+paragraph.count(';')} sentences")
-paragraph_list = paragraph.split(" ")
-print(len(paragraph_list))
-for index, i in enumerate(paragraph_list):
-    if i.isalpha() == False:
-        print(i)
-        paragraph_list.remove(i)
-
-print(paragraph_list, len(paragraph_list))
-# if i[0]=='(' and i[-1]==')':
-#     try:
-#         if int(i[1:-2]):
-#             paragraph_list.remove(i)
-#     except ValueError as ve:
-#         continue
-# if int(i):
-#     paragraph_list.remove(i)
-# if len(i)==1 and ascii(i)
-
+# print(f"The paragraph contains {len(paragraph)} characters")
+# print(f"The paragraph contains {paragraph.count('.')+paragraph.count(';')} sentences")
+# cleaned_paragraph = "".join(
+#     [char if char.isalpha() or char == " " else "" for char in paragraph]
+# )
+# cleaned_paragraph_1 = cleaned_paragraph.split(" ")
+# paragraph_1 = [i for i in cleaned_paragraph_1 if i != ""]
+# print(f"The paragraph contains {len(paragraph_1)} words")
+# print(f"The paragraph contains {len(set(paragraph_1))} unique words")
+# count_nb = 0
+# for i in paragraph:
+#     if not i.isspace():
+#         count_nb += 1
+# print(f"The paragraph contains {count_nb} non-whitespace characters")
+# print(
+#     f"The average amount of words per sentence is {len(paragraph_1)/(paragraph.count('.')+paragraph.count(';'))}"
+# )
+# print(f"The amount of non uniques words is {len(paragraph_1)-len(set(paragraph_1))}")
 
 # Exercise 4 : Frequency Of The Words
 # Instructions
@@ -166,3 +164,10 @@ print(paragraph_list, len(paragraph_list))
 #     choosing:1
 #     or:2
 #     to:1
+
+user_string = (
+    "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3"
+)
+string_list = user_string.split(" ")
+for i in set(string_list):
+    print(f"{i}:{string_list.count(i)}")
