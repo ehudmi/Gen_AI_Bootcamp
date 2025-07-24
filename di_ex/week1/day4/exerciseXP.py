@@ -300,7 +300,7 @@
 # counter = 0
 # while counter < len(sandwich_orders):
 #     if sandwich_orders[counter] == "Pastrami":
-#         sandwich_orders.pop
+#         sandwich_orders.pop(counter)
 #     else:
 #         finished_sandwiches.append(sandwich_orders[counter])
 #         print(f"I made your {sandwich_orders[counter]} sandwich")

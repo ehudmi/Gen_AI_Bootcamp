@@ -87,7 +87,7 @@
 # 13. Bonus: Instead of asking the user for 10 integers, generate 10 random integers yourself.
 # Make sure that these random integers are between -100 and 100.
 
-import random as rnd
+# import random as rnd
 
 # my_list = [rnd.randint(-100, 100) for i in range(10)]
 # print(my_list)
@@ -113,6 +113,37 @@ import random as rnd
 # Bonus: How many non-whitespace characters it contains.
 # Bonus: The average amount of words per sentence in the paragraph.
 # Bonus: the amount of non-unique words in the paragraph.
+
+paragraph = (
+    "The series originally focused on a World War II setting, with Infinity Ward developing "
+    "Call of Duty (2003) and Call of Duty 2 (2005) and Treyarch developing Call of Duty 3 (2006). "
+    "Infinity Ward's Call of Duty 4: Modern Warfare (2007) introduced a modern setting and proved to be "
+    "the breakthrough title for the series, creating the Modern Warfare sub-series; a Modern Warfare "
+    "remastered version was released in 2016. Two other entries, Modern Warfare 2 (2009) and "
+    "Modern Warfare 3 (2011), were made. The sub-series received a reboot with Modern Warfare in 2019, "
+    "Modern Warfare II in 2022, and Modern Warfare III in 2023. Infinity Ward has also developed two "
+    "games outside of the Modern Warfare sub-series, Ghosts (2013) and Infinite Warfare (2016)"
+)
+
+print(f"The paragraph contains {len(paragraph)} characters")
+print(f"The paragraph contains {paragraph.count('.')+paragraph.count(';')} sentences")
+paragraph_list = paragraph.split(" ")
+print(len(paragraph_list))
+for index, i in enumerate(paragraph_list):
+    if i.isalpha() == False:
+        print(i)
+        paragraph_list.remove(i)
+
+print(paragraph_list, len(paragraph_list))
+# if i[0]=='(' and i[-1]==')':
+#     try:
+#         if int(i[1:-2]):
+#             paragraph_list.remove(i)
+#     except ValueError as ve:
+#         continue
+# if int(i):
+#     paragraph_list.remove(i)
+# if len(i)==1 and ascii(i)
 
 
 # Exercise 4 : Frequency Of The Words
