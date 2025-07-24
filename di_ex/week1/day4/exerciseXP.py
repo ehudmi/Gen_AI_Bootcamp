@@ -282,15 +282,15 @@
 # Instructions:
 
 # Using the list:
-sandwich_orders = [
-    "Tuna",
-    "Pastrami",
-    "Avocado",
-    "Pastrami",
-    "Egg",
-    "Chicken",
-    "Pastrami",
-]
+# sandwich_orders = [
+#     "Tuna",
+#     "Pastrami",
+#     "Avocado",
+#     "Pastrami",
+#     "Egg",
+#     "Chicken",
+#     "Pastrami",
+# ]
 # The deli has run out of “Pastrami”, so use a loop to remove all instances of “Pastrami” from the list.
 # Prepare each sandwich, one by one, and move them to a list called finished_sandwiches.
 # Print a message for each sandwich made, such as: "I made your Tuna sandwich."
