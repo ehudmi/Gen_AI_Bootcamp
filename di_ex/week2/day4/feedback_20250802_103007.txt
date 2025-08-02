@@ -1,0 +1,11 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week2/day4/daily_challenge.py
+suggestions for improvement:
+- Challenge 1 is completely missing.  The code only addresses Challenge 2.
+- The `longest_word` function in Challenge 2 doesn't handle punctuation as instructed.  It splits on spaces only, ignoring other delimiters.
+- Add comments explaining the purpose of each step in Challenge 2 (or create a solution for Challenge 1).
+Brief justification:
+- correctness: The code only provides a solution for Challenge 2, and that solution is incomplete because it doesn't fully meet the requirements (handling punctuation). Challenge 1 is entirely absent, resulting in a low correctness score.  The code partially addresses the chapter content by demonstrating string manipulation, functions, loops, conditional statements (implicitly in `len()` comparison), and string length, but the incompleteness significantly reduces the score.
+- readability: The code for Challenge 2 is relatively easy to read and understand. The function is well-defined, and the logic is straightforward, although it could be improved with more descriptive variable names and comments.
+- performance: The performance of the `longest_word` function is efficient for its purpose. It iterates through the words only once. The time complexity is linear, O(n), where n is the number of words.
+- security: There are no security concerns in the provided code.
+
