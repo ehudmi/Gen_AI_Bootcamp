@@ -7,13 +7,10 @@ picture = [
     [0, 0, 0, 1, 0, 0, 0],
 ]
 
-for list_item in picture:
-    index = 0
-    while index < len(list_item):
-        if list_item[index] == 0:
-            list_item[index] = " "
-            index += 1
+for i in range(len(picture)):
+    for index, item in enumerate(picture[i]):
+        if item == 0:
+            picture[i][index] = " "
         else:
-            list_item[index] = "*"
-            index += 1
-    print("".join(list_item))
+            picture[i][index] = "*"
+    print("".join(picture[i]))
