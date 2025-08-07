@@ -79,8 +79,7 @@ def input_guess(letter, word_hidden, counter):
 
 def play():
     counter = 0
-    end_game = False
-    while end_game == False:
+    while True:
         result = input_guess(
             input("Please select a letter a-z\n").lower(), word_hidden, counter
         )
@@ -90,10 +89,10 @@ def play():
         if result[1] == 6:
             print(draw_hangman(result[1]))
             print("Sorry! You lost")
-            end_game = True
+            break
         if result[0] == word:
             print("Congrats! You won")
-            end_game = True
+            break
 
 
 play()
