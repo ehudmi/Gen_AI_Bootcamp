@@ -1,0 +1,11 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week2/day6/daily_challenge.py
+suggestions for improvement:
+- The `get_info` method's output formatting could be improved for better alignment.  Consider using f-strings with formatting specifiers for consistent column widths.
+- In `get_short_info`, the logic for adding 's' to animal names could be simplified. A more concise approach would improve readability.
+- Add docstrings to methods for better understanding.
+Brief justification:
+- correctness: The code correctly implements the `Farm` class, including the `__init__`, `add_animal`, and `get_info` methods, as specified in the instructions. The bonus methods, `get_animal_types` and `get_short_info`, are also implemented, fulfilling all requirements of the problem. There's a minor formatting issue in the `get_info` output;  the alignment isn't perfect, and the output string `info` in the get_info method contains an extra backtick after the farm name which should be removed.
+- readability: The code is generally readable, but some parts, particularly the `get_short_info` method's conditional logic, could be simplified for better clarity.  Adding docstrings would significantly enhance readability.
+- performance: The code's performance is efficient.  The algorithms used for adding animals and generating the output strings are optimized for the task.
+- security: There are no security concerns in this code; it only deals with string manipulation and dictionary operations.
+
