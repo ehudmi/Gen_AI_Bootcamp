@@ -1,0 +1,10 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week1/day2/daily_challenge.py
+suggestions for improvement:
+- The code is missing handling for non-string inputs.  It should include input validation to check if the input is actually a string.
+- The 'building the string character by character' section is inefficient.  It repeatedly concatenates strings which is an O(n^2) operation.  A more efficient approach would be to use string slicing.
+Brief justification:
+- correctness: The code correctly implements steps 1, 2, 3, and 5 as described in the chapter content. Step 4 (building the string character by character) is implemented, but inefficiently. The bonus (jumbling the string) is also correctly implemented.  The correctness score is reduced because of the missing input validation and the inefficient implementation of step 4.
+- readability: The code is well-structured and easy to follow. Variable names are descriptive and the logic is clear. The comments are helpful in understanding the code's purpose and functionality.
+- performance: The code's performance is good, except for step 4, where string concatenation within a loop leads to O(n^2) complexity. The rest of the code has good performance. The shuffling is efficient, using Python's built-in `random.shuffle`.
+- security: The code does not have any security vulnerabilities.  It only deals with user input and does not perform any operations that could introduce security risks.
+

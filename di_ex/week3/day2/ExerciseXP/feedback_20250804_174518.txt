@@ -1,0 +1,15 @@
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day2/ExerciseXP/exerciseXP.py
+suggestions for improvement:
+- In Exercise 1, the Siamese class is correctly created as inheriting from Cat; however, the code does not add any unique attributes or methods for Siamese cats as suggested in the instructions.  Consider adding breed-specific characteristics.
+- Exercise 2's `Dog` class correctly implements the specified methods.  The `fight()` method is functional, but a more sophisticated approach might involve considering factors beyond just `run_speed * weight` for a more realistic fight simulation. 
+- Exercise 3 is incomplete. The `PetDog` class is partially implemented, but the `train()`, `play()` and `do_a_trick()` methods lack crucial code. The `__init__` method should call `super().__init__(name, age, weight)` to properly initialize the inherited attributes from the `Dog` class.
+- Exercise 4's `Person` and `Family` classes are correctly structured and function as specified. The `check_majority()` method works as expected. The code would benefit from more robust error handling (e.g., if the `first_name` is not found in the family).  The `family_presentation()` method works well and could be enhanced to include the last name for each family member. 
+Correctness: 80%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day2/ExerciseXP/exerciseXP_additional.py
+suggestions for improvement:
+- The `__init__` method of `PetDog` should explicitly call `super().__init__(name, age, weight)` to initialize the inherited attributes from the `Dog` class.  The comment 'no need to put the details...' is misleading and should be replaced with the actual code. 
+- The `play` method's string concatenation can be improved for better readability and efficiency. Consider using f-strings or `join` for more concise code.
+- Add docstrings to the methods of `PetDog` to explain their purpose, parameters, and return values. This improves the readability and maintainability of the code.
+Correctness: 90%
+-----
