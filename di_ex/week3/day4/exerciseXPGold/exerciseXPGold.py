@@ -5,6 +5,23 @@
 # and print which holiday that is. (Example: the next holiday is New Years’ Eve in 30 days).
 # Hint: Use a module to find the datetime and name of the upcoming holiday.
 
+# from datetime import date as date
+# from holidays import country_holidays as holidays
+
+
+# def find_holiday():
+#     isr_holiday = holidays("ISR")
+#     current_date = date.today()
+#     next_holiday = isr_holiday.get_closest_holiday()
+#     date_diff = next_holiday[0] - current_date
+#     return f"Today is {current_date}. the next holiday is {next_holiday[1]} in {date_diff.days} days"
+
+
+# try:
+#     print(find_holiday())
+# except Exception as e:
+#     print("something went boom")
+
 
 # Exercise 2 : How Old Are You On Jupiter?
 # Instructions
@@ -21,6 +38,31 @@
 # Uranus: orbital period 84.016846 Earth years
 # Neptune: orbital period 164.79132 Earth years
 
+# ORBITAL_YEARS = {
+#     "Earth": {"earth_years": 1, "seconds": 31557600},
+#     "Mercury": {"earth_years": 0.2408467},
+#     "Venus": {"earth_years": 0.61519726},
+#     "Mars": {"earth_years": 1.8808158},
+#     "Jupiter": {"earth_years": 11.862615},
+#     "Saturn": {"earth_years": 29.447498},
+#     "Uranus": {"earth_years": 84.016846},
+#     "Neptune": {"earth_years": 164.79132},
+# }
+
+
+# def calc_age(seconds):
+#     for planet, data in ORBITAL_YEARS.items():
+#         planet_age = seconds / (ORBITAL_YEARS["Earth"]["seconds"] * data["earth_years"])
+#         print(f"Your age on planet {planet} is {planet_age:.2f} years")
+
+
+# try:
+#     user_age_in_seconds = int(input("Please enter your age in seconds: "))
+#     calc_age(user_age_in_seconds)
+# except ValueError:
+#     print("Invalid input. Please enter a whole number.")
+# except Exception as e:
+#     print(f"An unexpected error occurred: {e}")
 
 # Exercise 3 : Regular Expression #1
 # Instructions
@@ -32,6 +74,16 @@
 
 # return_numbers('k5k3q2g5z6x9bn')
 # // Excepted output : 532569
+# import re
+
+
+# def return_numbers(string: str):
+#     """extract digits from string"""
+#     pattern = re.compile(r"[0-9]")
+#     print("".join(pattern.findall(string)))
+
+
+# return_numbers("k5k3q2g5z6x9bn")
 
 
 # Exercise 4 : Regular Expression #2
@@ -43,6 +95,24 @@
 # The name should contain only one space.
 # The first letter of each name should be upper cased.
 
+# import re
+
+
+# def user_info(name):
+#     pattern = re.compile(r"^[A-Z][a-z]*\s[A-Z][a-z]*")
+#     if pattern.fullmatch(name):
+#         print(f"Your name {name} checks out")
+#     else:
+#         print("Try again")
+
+
+# try:
+#     your_name = input(
+#         "What is your name - capitalize first name and family name please\n"
+#     )
+#     user_info(your_name)
+# except:
+#     print("you made a booboo")
 
 # Exercise 5: Python Password Generator
 # Instructions
@@ -77,3 +147,12 @@
 # Test the password to ensure that:
 # it fulfills all the requirements above (eg. it has at least one digit, etc.)
 # it has the specified length.
+import re
+from random import randint, choices
+
+
+def password_generator(start, end):
+    password = ""
+    length = end - start
+    for _ in range(start, end + 1):
+        password
