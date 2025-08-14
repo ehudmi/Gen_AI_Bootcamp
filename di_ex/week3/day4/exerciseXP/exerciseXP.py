@@ -21,63 +21,63 @@
 # Instructions:
 
 
-# class Currency:
-#     def __init__(self, currency, amount):
-#         self.currency = currency
-#         self.amount = amount
+class Currency:
+    def __init__(self, currency, amount):
+        self.currency = currency
+        self.amount = amount
 
-#     #     #Your code starts HERE
-#     def __str__(self):
-#         if self.amount == 1:
-#             return f"{self.amount} {self.currency}"
-#         else:
-#             return f"{self.amount} {self.currency}s"
+    #     #Your code starts HERE
+    def __str__(self):
+        if self.amount == 1:
+            return f"{self.amount} {self.currency}"
+        else:
+            return f"{self.amount} {self.currency}s"
 
-#     def __repr__(self):
-#         if self.amount == 1:
-#             return f"{self.amount} {self.currency}"
-#         else:
-#             return f"{self.amount} {self.currency}s"
+    def __repr__(self):
+        if self.amount == 1:
+            return f"{self.amount} {self.currency}"
+        else:
+            return f"{self.amount} {self.currency}s"
 
-#     def __int__(self):
-#         if isinstance(self.amount, int):
-#             return self.amount
-#         else:
-#             return print("You have input a string and not a number")
+    def __int__(self):
+        if isinstance(self.amount, int):
+            return self.amount
+        else:
+            return print("You have input a string and not a number")
 
-#     def __add__(self, other):
-#         if isinstance(other, Currency):
-#             if self.currency == other.currency:
-#                 result = self.amount + other.amount
-#                 return result
-#             else:
-#                 raise TypeError(
-#                     f"TypeError: Cannot add between Currency type {self.currency} and {other.currency}"
-#                 )
-#         elif isinstance(other, int):
-#             result = self.amount + other
-#             return result
-#         else:
-#             raise TypeError(f"TypeError: the parameter provided is not a currency")
+    def __add__(self, other):
+        if isinstance(other, Currency):
+            if self.currency == other.currency:
+                result = self.amount + other.amount
+                return result
+            else:
+                raise TypeError(
+                    f"TypeError: Cannot add between Currency type {self.currency} and {other.currency}"
+                )
+        elif isinstance(other, int):
+            result = self.amount + other
+            return result
+        else:
+            raise TypeError(f"TypeError: the parameter provided is not a currency")
 
-#     def __iadd__(self, other):
-#         if isinstance(other, Currency):
-#             if self.currency == other.currency:
-#                 result = self.amount + other.amount
-#                 self.amount = result
-#                 return self
-#             else:
-#                 raise TypeError(
-#                     f"TypeError: Cannot add between Currency type {self.currency} and {other.currency}"
-#                 )
-#         elif isinstance(other, int):
-#             result = self.amount + other
-#             self.amount = result
-#             return self
-#         else:
-#             raise TypeError(
-#                 f"TypeError: the value you are trying to add is not a currency"
-#             )
+    def __iadd__(self, other):
+        if isinstance(other, Currency):
+            if self.currency == other.currency:
+                result = self.amount + other.amount
+                self.amount = result
+                return self
+            else:
+                raise TypeError(
+                    f"TypeError: Cannot add between Currency type {self.currency} and {other.currency}"
+                )
+        elif isinstance(other, int):
+            result = self.amount + other
+            self.amount = result
+            return self
+        else:
+            raise TypeError(
+                f"TypeError: the value you are trying to add is not a currency"
+            )
 
 
 # Using the code above, implement the relevant methods and dunder methods which will output the
@@ -85,10 +85,10 @@
 
 # Hint : When adding 2 currencies which don’t share the same label you should raise an error.
 
-# c1 = Currency("dollar", 5)
-# c2 = Currency("dollar", 10)
-# c3 = Currency("shekel", 1)
-# c4 = Currency("shekel", 10)
+c1 = Currency("dollar", 5)
+c2 = Currency("dollar", 10)
+c3 = Currency("shekel", 1)
+c4 = Currency("shekel", 10)
 
 # #the comment is the expected output
 # print(c1)
@@ -171,13 +171,13 @@
 # Step 1: Import the string and random modules
 
 # Import the string and random modules.
-# import string
-# import random
+import string
+import random
 
 # Step 2: Create a string of all letters
 
 # Read about the strings methods HERE to find the best methods for this step
-# my_str = string.ascii_letters
+my_str = string.ascii_letters
 
 # Step 3: Generate a random string
 
@@ -185,16 +185,16 @@
 # Concatenate the characters to form the random string.
 
 
-# def random_string(string):
-#     rand_str = ""
-#     for i in range(6):
-#         index = random.randint(0, len(string))
-#         char = string[index]
-#         rand_str += char
-#     return rand_str
+def random_string(string):
+    rand_str = ""
+    for i in range(6):
+        index = random.randint(0, len(string))
+        char = string[index]
+        rand_str += char
+    return rand_str
 
 
-# print(random_string(my_str))
+print(random_string(my_str))
 
 # 🌟 Exercise 4: Current Date
 # Goal: Create a function that displays the current date.
@@ -215,10 +215,10 @@
 
 # Step 3: Display the date
 
-# import datetime
+import datetime
 
-# current_date = datetime.date.today()
-# print(current_date)
+current_date = datetime.date.today()
+print(current_date)
 
 
 # 🌟 Exercise 5: Amount of time left until January 1st
@@ -248,10 +248,10 @@
 
 # import datetime
 
-# current_date = datetime.datetime.today()
-# fut_date = datetime.datetime(2026, 1, 1)
-# date_diff = fut_date - current_date
-# print(date_diff)
+current_date = datetime.datetime.today()
+fut_date = datetime.datetime(2026, 1, 1)
+date_diff = fut_date - current_date
+print(date_diff)
 
 # 🌟 Exercise 6: Birthday and minutes
 # Key Python Topics:
@@ -270,16 +270,16 @@
 # import datetime
 
 
-# def calculate_days(date):
-#     """calculate how many days lived"""
-#     birth_date = datetime.datetime(int(date[:4]), int(date[5:7]), int(date[8:]))
-#     current_date = datetime.datetime.today()
-#     date_diff = current_date - birth_date
-#     print(f"You have been alive for {int(date_diff.total_seconds())} seconds")
+def calculate_days(date):
+    """calculate how many days lived"""
+    birth_date = datetime.datetime(int(date[:4]), int(date[5:7]), int(date[8:]))
+    current_date = datetime.datetime.today()
+    date_diff = current_date - birth_date
+    print(f"You have been alive for {int(date_diff.total_seconds())} seconds")
 
 
-# birthdate = input("Please enter a birthdate in YYYY/MM/DD format\n")
-# calculate_days(birthdate)
+birthdate = input("Please enter a birthdate in YYYY/MM/DD format\n")
+calculate_days(birthdate)
 
 
 # 🌟 Exercise 7: Faker Module
@@ -318,22 +318,22 @@
 # Append the user dictionary to the users list.
 # Step 5: Call the function and print the users list
 
-# from faker import Faker
+from faker import Faker
 
-# user_list = []
-# faker = Faker()
-
-
-# def gen_users(num_users):
-#     """function to generate users"""
-#     for i in range(num_users):
-#         new_user = {
-#             "name": faker.name(),
-#             "address": faker.address(),
-#             "language_code": faker.language_code(),
-#         }
-#         user_list.append(new_user)
-#     return user_list
+user_list = []
+faker = Faker()
 
 
-# print(gen_users(6))
+def gen_users(num_users):
+    """function to generate users"""
+    for i in range(num_users):
+        new_user = {
+            "name": faker.name(),
+            "address": faker.address(),
+            "language_code": faker.language_code(),
+        }
+        user_list.append(new_user)
+    return user_list
+
+
+print(gen_users(6))

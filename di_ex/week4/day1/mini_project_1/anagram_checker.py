@@ -1,34 +1,3 @@
-# What you will learn
-# OOP
-# Python Files I/O
-
-
-# What you will create
-
-
-# 🌟 Anagram checker
-# We will create a program that will ask the user for a word.
-# It will check if the word is a valid English word, and then find all possible anagrams for that word.
-
-
-# Instructions
-# First Download this text file
-
-# Create a new file called anagram_checker.py which contains a class called AnagramChecker.
-
-# The class should have the following methods:
-# __init__ - should load the word list file (text file) into a variable, so that it can be searched
-# later on in the code.
-# is_valid_word(word) – should check if the given word (ie. the word of the user) is a valid word.
-
-# get_anagrams(word) – should find all anagrams for the given word. (eg. if word of the user is
-# ‘meat’, the function should return a list containing [“mate”, “tame”, “team”].)
-
-# Hint: you might want to create a separate method called is_anagram(word1, word2), that will
-# compare 2 words and return True if they contain the same letters (but not in the same order),
-# and False if not.
-
-# Note: None of the methods in the class should print anything.
 from pathlib import Path
 from itertools import permutations as permutations
 
@@ -64,3 +33,36 @@ class AnagramChecker:
         except TypeError:
             return "The word provided is not a string"
         return anagram_list
+
+
+# What you will learn
+# OOP
+# Python Files I/O
+
+
+# What you will create
+
+
+# 🌟 Anagram checker
+# We will create a program that will ask the user for a word.
+# It will check if the word is a valid English word, and then find all possible anagrams for that word.
+
+
+# Instructions
+# First Download this text file
+
+# Create a new file called anagram_checker.py which contains a class called AnagramChecker.
+
+# The class should have the following methods:
+# __init__ - should load the word list file (text file) into a variable, so that it can be searched
+# later on in the code.
+# is_valid_word(word) – should check if the given word (ie. the word of the user) is a valid word.
+
+# get_anagrams(word) – should find all anagrams for the given word. (eg. if word of the user is
+# ‘meat’, the function should return a list containing [“mate”, “tame”, “team”].)
+
+# Hint: you might want to create a separate method called is_anagram(word1, word2), that will
+# compare 2 words and return True if they contain the same letters (but not in the same order),
+# and False if not.
+
+# Note: None of the methods in the class should print anything.
