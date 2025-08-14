@@ -148,11 +148,42 @@
 # it fulfills all the requirements above (eg. it has at least one digit, etc.)
 # it has the specified length.
 import re
-from random import randint, choices
+from random import choices
+
+LETTERS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+DIGITS = "0123456789"
+SPECIAL_CHARS = "!@#$%^&*_+-=|;:,.<>?"
+SEQUENCE = LETTERS + DIGITS + SPECIAL_CHARS
 
 
-def password_generator(start, end):
-    password = ""
-    length = end - start
-    for _ in range(start, end + 1):
-        password
+def test_password(password):
+    """test if password matches regex"""
+    pattern = re.compile(
+        r"^(?=.+\d)(?=.+[a-z])(?=.+[A-Z])(?=.+[!@#$%^&*_+-=|;:,.<>?])[A-Za-z\d!@#$%^&*_+-=|;:,.<>?]+$"
+    )
+    if re.fullmatch(pattern, password):
+        return True
+
+
+def password_generator(number):
+    """generate password and check it"""
+    while True:
+        char_list = choices(SEQUENCE, k=number)
+        print(char_list, "".join(char_list))
+        password = "".join(char_list)
+        print(password)
+        if test_password(password):
+            print(f"Your new password is - {password} - keep it safe")
+            break
+        else:
+            continue
+
+
+try:
+    length = int(input("Please select password length between 6 and 30 characters\n"))
+    if 6 <= length <= 30:
+        password_generator(length)
+    else:
+        print("You did not input a length in the criteria. Bye!")
+except ValueError as e:
+    print("I asked for a number")
