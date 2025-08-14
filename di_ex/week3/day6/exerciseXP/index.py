@@ -1,3 +1,46 @@
+from pathlib import Path
+from random import randint
+
+FILE_PATH = Path(__file__).parent / "words.txt"
+
+
+def get_words_from_file(file_path):
+    """read words file and create list of words"""
+    with open(file_path, "r") as file:
+        word_list = file.read().split()
+        return word_list
+
+
+def get_random(sentence_length):
+    """get random words from list and create sentence based on length"""
+    words = get_words_from_file(FILE_PATH)
+    sentence = ""
+    for _ in range(sentence_length):
+        index = randint(0, len(words) - 1)
+        sentence += f"{words[index].lower()} "
+    return sentence
+
+
+def main():
+    """main function to generate random sentence from word list"""
+    print("This program generates a sentence of specified length from list of words")
+    try:
+        user_input = input(
+            "Please input a length of sentence between 2 and 20(included)\n"
+        )
+        length = int(user_input)
+        if 2 <= length <= 20:
+            rand_sentence = get_random(length)
+            print(rand_sentence)
+        else:
+            raise Exception("length not in the specified range")
+    except ValueError:
+        print("The input is not an integer")
+
+
+main()
+
+
 # 🌟 Exercise 1: Random Sentence Generator
 # Goal: Create a program that generates a random sentence of a specified length from a word list.
 
@@ -27,18 +70,6 @@
 # Read the file content.
 # Split the content into a list of words.
 # Return the list of words.
-# from pathlib import Path
-# from random import randint
-
-# FILE_PATH = Path(__file__).parent / "words.txt"
-
-
-# def get_words_from_file(file_path):
-#     """read words file and create list of words"""
-#     with open(file_path, "r") as file:
-#         word_list = file.read().split()
-#         return word_list
-
 
 # Step 2: Create the get_random_sentence function
 
@@ -48,16 +79,6 @@
 # Create a sentence with the selected words.
 # Convert the sentence to lowercase.
 # Return the sentence.
-
-
-# def get_random(sentence_length):
-#     """get random words from list and create sentence based on length"""
-#     words = get_words_from_file(FILE_PATH)
-#     sentence = ""
-#     for _ in range(sentence_length):
-#         index = randint(0, len(words) - 1)
-#         sentence += f"{words[index].lower()} "
-#     return sentence
 
 
 # Step 3: Create the main function
@@ -70,26 +91,6 @@
 # Check if it is between 2 and 20 (inclusive).
 # If the input is invalid, print an error message and exit.
 # If the input is valid, call get_random_sentence with the length and print the generated sentence.
-
-
-# def main():
-#     """main function to generate random sentence from word list"""
-#     print("This program generates a sentence of specified length from list of words")
-#     try:
-#         user_input = input(
-#             "Please input a length of sentence between 2 and 20(included)\n"
-#         )
-#         length = int(user_input)
-#         if 2 <= length <= 20:
-#             rand_sentence = get_random(length)
-#             print(rand_sentence)
-#         else:
-#             raise Exception("length not in the specified range")
-#     except ValueError:
-#         print("The input is not an integer")
-
-
-# main()
 
 
 # 🌟 Exercise 2: Working with JSON
@@ -134,6 +135,7 @@ sampleJson = """{
 # Import the json module.
 # Use json.loads() to parse the JSON string into a Python dictionary.
 
+data = json.loads(sampleJson)
 
 # Step 2: Access the nested “salary” key
 
@@ -141,15 +143,22 @@ sampleJson = """{
 # data["company"]["employee"]["payable"]["salary"]).
 # Print the value of the “salary” key.
 
+print(data["company"]["employee"]["payable"]["salary"])
 
 # Step 3: Add the “birth_date” key
 
 # Add a new key-value pair to the “employee” dictionary: "birth_date": "YYYY-MM-DD".
 # Replace "YYYY-MM-DD" with an actual date.
 
+data["company"]["employee"]["birthdate"] = "1966-12-03"
 
 # Step 4: Save the JSON to a file
 
 # Open a file in write mode ("w").
 # Use json.dump() to write the modified dictionary to the file in JSON format.
 # Use the indent parameter to make the JSON file more readable.
+
+directory = Path(__file__).parent
+file_path = directory / "output.json"
+with open(file_path, "w") as file_obj:
+    json.dump(data, file_obj, indent=2)
