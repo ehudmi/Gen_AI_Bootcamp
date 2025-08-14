@@ -1,3 +1,66 @@
+from pathlib import Path
+import string
+import re
+
+
+class Text:
+    def __init__(self, text: str):
+        # initialize with text
+        self.text = text
+        self.word_list = self.text.split()
+
+    def word_frequency(self, word):
+        # split the text into list of words and count occurrences of word
+        if word in self.word_list:
+            return self.word_list.count(word)
+        else:
+            return f"the word {word} does not appear in the text"
+
+    def most_common_word(self):
+        # create dictionary of word occurrences and return list of most common words
+        occurrences = {word: self.word_list.count(word) for word in self.word_list}
+        max_value = max(occurrences.values())
+        most_common = [key for key in occurrences if occurrences[key] == max_value]
+        return (most_common, max_value)
+
+    def unique_words(self):
+        # find all the unique words
+        unique_words = set(self.word_list)
+        return list(unique_words)
+
+    @classmethod
+    def from_file(cls, file_path):
+        with open(file_path, "r") as file:
+            file_text = cls(file.read())
+            return file_text
+
+
+class TextModification(Text):
+    STOP_WORDS = ["a", "an", "the", "in", "on", "is", "of", "and"]
+
+    def __init__(self, text):
+        super().__init__(text)
+        self.text = self.text.lower()  # Convert to lowercase
+        self.text = self.remove_punctuation()  # Remove punctuation
+        self.text = self.remove_stop_words()  # Remove stop words
+        self.word_list = self.text.split()
+
+    def remove_punctuation(self):
+        cleaned = self.text.translate(str.maketrans("", "", string.punctuation))
+        return cleaned
+
+    def remove_stop_words(self):
+        words = self.text.split(" ")
+        filtered_words = [word for word in words if word not in self.STOP_WORDS]
+        new_text = ",".join(filtered_words)
+        return new_text
+
+    def remove_special_characters(self):
+        pattern = re.compile(r"[^a-zA-Z0-9\s]")
+        cleaned_text = pattern.sub("", self.text)
+        return cleaned_text
+
+
 # 👩‍🏫 👩🏿‍🏫 What You’ll learn
 # OOP (Classes, Class Methods, Inheritance)
 # Modules (File Handling, String Manipulation, Data Structures)
