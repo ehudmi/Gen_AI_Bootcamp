@@ -1,0 +1,15 @@
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day4/exerciseXP/exerciseXP.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day4/exerciseXP/exercise_one.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day4/exerciseXP/func.py
+suggestions for improvement:
+- Skipping file (too many comments or blank lines).
+Correctness: N/A%
+-----

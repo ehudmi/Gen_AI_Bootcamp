@@ -1,0 +1,11 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week2/day2/exerciseXP.py
+suggestions for improvement:
+- Exercise 1: The code is correct but could be improved by adding the function definition and call within a main function for better structure. 
+- Exercise 4: The function should print the success/fail message and the numbers, as specified in the exercise description.
+- Exercise 7: The bonus part for handling seasons based on the month is implemented correctly, but it would be better to handle potential errors (like non-numeric input) more robustly. The main function does not include the temperature advice part for the bonus section.
+Brief justification:
+- correctness: The code correctly implements the core logic of most exercises (1, 2, 3, 5, 6). Exercise 4 is partially correct because the output format does not follow the requirements. Exercise 7 is partially correct; the base functionality is implemented correctly, but the bonus parts need more work to fully meet the requirements. The code directly addresses the problems described in the Chapter Content/Questions; hence, the correctness score is not 0%.
+- readability: The code is well-structured and uses clear variable names. Function names are descriptive, making the code easy to understand.
+- performance: The code's performance is efficient for the tasks it performs. The use of f-strings for string formatting is efficient and readable.
+- security: No security vulnerabilities are present in the code.  The code does not interact with external resources or handle user input in a way that would introduce security risks.
+
