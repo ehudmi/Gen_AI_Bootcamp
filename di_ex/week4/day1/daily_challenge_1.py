@@ -1,43 +1,3 @@
-# Instructions
-# Part 1 : Quizz :
-# Answer the following questions
-
-# What is a class?
-# A class is a blueprint for creating objects with predefined attributes and methods
-
-# What is an instance?
-# An instance is an object based on the blueprint of the class
-
-# What is encapsulation?
-# encapsulation is the creation of objects that can handle both attributes and methods to manage
-# data
-
-# What is abstraction?
-# abstraction is using an attribute or method without being exposed to the way they were
-# implemented
-
-# What is inheritance?
-# inheritance is when the object created on the basis of a class receives attributes and
-# methods from the parent class or when a class inherits from a parent class
-
-# What is multiple inheritance?
-# multi-inheritance is when an object inherits from more than one class - either directly or
-# indirectly if the classes he is inheriting from are also based on other classes and inheriting
-# from them
-
-# What is polymorphism?
-# polymorphism is when a method can behave differently when called by different object classes
-# even if the classes share the same method name
-
-# What is method resolution order or MRO?
-# MRO is the way python handles multi-inheritance and the way it decides who takes precedence in
-# determining whose inheritance the object will receive
-
-
-# Part 2: Create a deck of cards class.
-# The Deck of cards class should NOT inherit from a Card class.
-
-# The requirements are as follows:
 from random import shuffle, randint
 
 
@@ -83,3 +43,44 @@ my_deck.deal()
 
 # my_card = Card("Hearts", "2")
 # print(my_card.suit)
+
+# Instructions
+# Part 1 : Quizz :
+# Answer the following questions
+
+# What is a class?
+# A class is a blueprint for creating objects with predefined attributes and methods
+
+# What is an instance?
+# An instance is an object based on the blueprint of the class
+
+# What is encapsulation?
+# encapsulation is the creation of objects that can handle both attributes and methods to manage
+# data
+
+# What is abstraction?
+# abstraction is using an attribute or method without being exposed to the way they were
+# implemented
+
+# What is inheritance?
+# inheritance is when the object created on the basis of a class receives attributes and
+# methods from the parent class or when a class inherits from a parent class
+
+# What is multiple inheritance?
+# multi-inheritance is when an object inherits from more than one class - either directly or
+# indirectly if the classes he is inheriting from are also based on other classes and inheriting
+# from them
+
+# What is polymorphism?
+# polymorphism is when a method can behave differently when called by different object classes
+# even if the classes share the same method name
+
+# What is method resolution order or MRO?
+# MRO is the way python handles multi-inheritance and the way it decides who takes precedence in
+# determining whose inheritance the object will receive
+
+
+# Part 2: Create a deck of cards class.
+# The Deck of cards class should NOT inherit from a Card class.
+
+# The requirements are as follows:

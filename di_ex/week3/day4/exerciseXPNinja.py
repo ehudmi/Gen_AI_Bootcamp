@@ -107,11 +107,38 @@ except ValueError:
 # Write a class called QuantumParticle and implement the following:
 # The attributes - The particle has an initial position (x), momentum (y) and spin (p)
 
+import random
+
+
+class QuantumParticle:
+    def __init__(self, x, y, p):
+        self.particle_position = x
+        self.particle_momentum = y
+        self.particle_spin = p
+
+    def position(self):
+        """position measurement generated randomly"""
+        self.particle_position = random.randint(1, 10000)
+        return self.particle_position
+
+    def momentum(self):
+        """momentum measurement generated randomly"""
+        self.particle_momentum = random.random(0, 1)
+        return self.particle_momentum
+
+    def spin(self):
+        self.particle_spin = random.choice([0.5, -0.5])
+        return self.particle_spin
+
+    def disturbance(self):
+        pass
+
+
 # The method position() - Position measurement: generate a random position (integer between 1 and
 # 10,000)
 
-# The method momentum() - Momentum measurement: generate a random momentum (float - a number between 0
-# and 1)
+# The method momentum() - Momentum measurement: generate a random momentum (float - a number
+# between 0 and 1)
 
 # The method spin() - Spin measurement: can randomly be 1/2 or -1/2
 
