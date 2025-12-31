@@ -1,0 +1,5 @@
+fastmcp==2.14.2
+groq==1.0.0
+mcp==1.25.0
+nest_asyncio==1.6.0
+streamlit==1.52.2
