@@ -1,0 +1,35 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/app.py
+suggestions for improvement:
+- The `LeanMCPAgent` class and `server.py` are not provided, making it difficult to fully assess the implementation of custom tools and composition. Showing the contents of these files is crucial for a complete review.
+- The code uses hardcoded paths (node_modules_path). Consider using environment variables or configuration files for better portability and maintainability.
+- Implement error handling to gracefully catch exceptions during server connections or agent interactions and give it another try.
+- Consider using a more robust mechanism for discovering and managing tools, such as a registry or a dedicated tool management module.
+Correctness: 75%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/client.py
+suggestions for improvement:
+- The code implements the agentic client part of the problem, but lacks the custom MCP server with custom tools, which is a crucial part of the requirements.
+- The `connect_server` function uses `shell=True`, which introduces security risks. Avoid it if possible.
+- Consider adding error handling within the `connect_server` function in case the connection to the server fails.
+- Instead of using `hasattr` and `isinstance` to check the type of the last message, implement a more robust and explicit way to determine the task completion status.
+Correctness: 60%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/requirements.txt
+suggestions for improvement:
+- The provided code is a list of Python packages, not an implementation of the MCP server, custom tools, or agentic client as described in the problem. Therefore, it does not address any of the requirements outlined in the chapter content.
+Correctness: 0.0%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/server.py
+suggestions for improvement:
+- The code fulfills the requirement of creating an MCP server with custom tools, specifically `save_note` and `read_notes`.
+- The code doesn't address the requirements of combining the custom server with external servers from Part 1 or integrating with GroqCloud or Ollama for planning and robustness.
+- The code lacks the client-side agentic functionality to discover tools and plan multi-step calls using an LLM.
+- Consider adding input validation and sanitization to the `save_note` tool to prevent potential security issues.
+- Implement better error handling and logging for improved debugging and monitoring.
+Correctness: 70%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/test_notes.py
+suggestions for improvement:
+- The provided code snippet only shows the client side and how to interact with a server. It doesn't provide any custom tools or server implementation as required in the prompt. It lacks the implementation of the MCP server with custom tools and the composition with other external servers. Also, it doesn't showcase the planning aspect based on LLM's choice of action.
+Correctness: 0%
+-----
