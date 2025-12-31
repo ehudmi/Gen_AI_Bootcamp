@@ -1,0 +1,49 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/app.py
+suggestions for improvement:
+- The agent should discover tools from both your server and external servers as required.
+- The server address should be configurable, not hardcoded.
+- The example only uses one custom tool, consider adding a second.
+- The example does not explicitly demonstrate re-planning based on failures.
+Correctness: 30%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/client.py
+suggestions for improvement:
+- The code lacks the crucial part of creating a custom MCP server with custom tools. It focuses only on the client side, connecting to existing servers and orchestrating them.
+- The agentic client correctly discovers and uses tools from external servers, but it doesn't fulfill the requirement of integrating with *your own* server, which is the core of the assignment.
+- Consider adding error handling and logging for better robustness.
+- Implement input validation and sanitization to improve the security of tool calls.
+- Ensure proper shutdown of asynchronous resources in the cleanup method.
+Correctness: 50%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/main.py
+suggestions for improvement:
+- The `LeanMCPAgent` class needs to be updated to handle multiple server connections as described in the comments.  Without seeing that code, it's impossible to be sure this part is fully correct.
+- The `node_modules_path` should be configurable and not hardcoded.
+- The agent uses brave and github. The requirements state to create a server that exposes at least one non-trivial tool and use it. The submission seems to use an example server from part 1, the `notes` server. This is not compliant with the instructions.
+- There is no specific tool functionality implemented in the `notes` server here.
+Correctness: 75%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/requirements.txt
+suggestions for improvement:
+- This submission only contains a list of Python packages. It does not include any code implementing the MCP server, custom tools, agentic client, or any logic for composing services, as required by the chapter content.
+- Provide code that implements the MCP server with custom tools, a client that discovers and orchestrates these tools with external services, and demonstrates planning and robustness.
+- Include clear input/output schemas for your custom tools.
+- Show how the LLM (GroqCloud or Ollama) is used for planning next actions based on intermediate results.
+Correctness: 0%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/server.py
+suggestions for improvement:
+- The code provides a basic MCP server with two tools, which fulfills the requirement of having at least one custom tool. However, it lacks integration with external MCP servers and doesn't showcase LLM-driven planning and orchestration. It also doesn't explicitly support GroqCloud or Ollama.
+- The `read_notes` function only lists the names of the notes. To better align with the prompt's intention of 'enrichment' or 'transformation', consider including a summary of each note's content (e.g., the first few lines).
+- The server lacks input validation and proper error handling for file operations, which could lead to security vulnerabilities (e.g., path traversal).
+- The code doesn't include a client that discovers tools from the server, composes them with external services, and uses an LLM for planning.
+Correctness: 60%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/test_notes.py
+suggestions for improvement:
+- The code snippet doesn't implement an MCP server with custom tools as required by the prompt. It only connects to a server (presumably the one from Part 1 or a similar one) and sends a test prompt.
+- The code doesn't demonstrate the composition of your own server with external servers from Part 1.
+- The code doesn't show how the LLM chooses next actions based on intermediate results (planning).
+- The server address is hardcoded, consider using an environment variable.
+Correctness: 0%
+-----

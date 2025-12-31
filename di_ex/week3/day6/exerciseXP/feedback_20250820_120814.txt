@@ -1,0 +1,28 @@
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day6/exerciseXP/index.py
+suggestions for improvement:
+- Rename the `get_random` function to `get_random_sentence` as specified in the instructions for Exercise 1.
+- In the `main` function (Exercise 1), for invalid sentence length input (out of range), replace `raise Exception` with a simple `print` statement and `return` (or `sys.exit()`) to ensure the program exits gracefully as instructed, rather than crashing.
+- Consider using `random.choice()` in `get_random_sentence` (formerly `get_random`) as suggested in the 'Key Python Topics' for Exercise 1, for more idiomatic Python list element selection, though `randint` is functionally correct.
+- In Exercise 2, change the newly added key from `birthdate` to `birth_date` to exactly match the instruction: `"birth_date": "YYYY-MM-DD"`.
+Correctness: 85%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day6/exerciseXP/output.json
+suggestions for improvement:
+- **Provide Python Code:** The provided submission is a JSON data structure, not the Python code required to complete the exercises. Please submit the actual Python scripts (e.g., `.py` files) that implement the functions and logic for both "Exercise 1: Random Sentence Generator" and "Exercise 2: Working with JSON".
+- **Implement Exercise 1:** The current submission contains no code related to Exercise 1, which requires functions for reading word lists, generating random sentences, and handling user input. This entire exercise is unaddressed.
+- **Implement Exercise 2 Logic:** For Exercise 2, the submission should include the Python code that:
+    *   Imports the `json` module.
+    *   Parses the `sampleJson` string using `json.loads()`.
+    *   Accesses and potentially prints the "salary" key.
+    *   Adds the "birth_date" key to the "employee" dictionary.
+    *   Saves the modified JSON object to a file using `json.dump()`.
+The provided JSON structure only represents the *result* of one of these steps (adding a key), not the implementation of any of the required Python functions or logic.
+Correctness: 0%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week3/day6/exerciseXP/words.txt
+suggestions for improvement:
+- The provided content is a plain text word list, not a Python program. Please provide the actual Python code you have written to implement the exercises.
+- Ensure your Python code includes all the functions and logic described in Exercise 1 (get_words_from_file, get_random_sentence, main) for generating random sentences.
+- For Exercise 2, make sure your Python code uses the `json` module to parse the `sampleJson` string, access nested dictionary keys, add new key-value pairs, and save the modified dictionary to a file using `json.dump(..., indent=4)`.
+Correctness: 0%
+-----

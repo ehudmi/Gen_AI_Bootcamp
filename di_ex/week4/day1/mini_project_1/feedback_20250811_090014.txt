@@ -1,0 +1,16 @@
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week4/day1/mini_project_1/anagram_checker.py
+suggestions for improvement:
+- The `anagrams.py` file, responsible for the user interface, is missing. The instructions clearly state that this file should handle user interaction and utilize the `AnagramChecker` class.
+- Error handling in `is_valid_word` and `get_anagrams` could be improved. Instead of returning a string, raising a more specific exception (e.g., `ValueError`) would be better practice.  The caller can then handle the exception appropriately.
+- The performance of `get_anagrams` can be significantly improved.  Generating all permutations is computationally expensive for longer words. Consider optimizing by pre-processing the word list to group words by their character counts or using a more efficient algorithm.
+- Add docstrings to clarify the purpose and parameters of each method.
+Correctness: 85%
+-----
+URL: URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week4/day1/mini_project_1/anagrams.py
+suggestions for improvement:
+- The `anagram_checker.py` file is missing, making it impossible to fully assess the correctness of the `anagrams.py` file.  The provided code only shows the user interface part.
+- Error handling could be improved. Instead of just printing 'Invalid input', provide more specific error messages to guide the user.
+- The performance could be improved by optimizing the anagram search algorithm in `AnagramChecker`. Consider using more efficient data structures or algorithms.
+- Add comprehensive docstrings to both the `AnagramChecker` class and the functions in `anagrams.py` for better readability and understanding.
+Correctness: 80%
+-----
