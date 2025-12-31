@@ -1,0 +1,35 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/client.py
+suggestions for improvement:
+- The code lacks the crucial part of creating an MCP server with custom tools. It focuses on connecting to external MCP servers and using them within an agentic client.
+- The provided code only implements the client side (connecting to existing MCP servers and calling their tools using an LLM). To fully address the prompt, you need to create your own MCP server with at least one or two custom tools.
+- Consider adding error handling for network connections and API calls to improve robustness.
+- The cleanup function is good for shutting down the client connections, but remember the MCP server you create also needs a proper shutdown mechanism to release resources.
+Correctness: 50%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/main.py
+suggestions for improvement:
+- The client side seems to connect to the servers as expected and attempts to compose them. However, there is no code provided for the server-side, specifically for the custom 'notes' server (server.py), so it cannot be fully assessed if it fulfills the requirements of adding a custom tool with clear input/output schemas. The chapter requests to add a custom MCP server with at least 1-2 custom tools. This code does connect to a notes server and assumes its existence, however the contents and implementation details of `server.py` are not provided and therefore cannot be evaluated.
+- The path construction for node modules could be made more robust by using environment variables and cross-platform compatible path joining.
+- Error handling could be improved, especially around server connections. Consider adding specific exception handling and logging to provide more informative feedback.
+Correctness: 75%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/requirements.txt
+suggestions for improvement:
+- This submission only contains a list of Python package dependencies. It does not implement any of the functionality described in the Chapter Content/Questions, such as creating an MCP server with custom tools, composing it with external servers, or building an agentic client with LLM planning.
+- The submission needs to include the actual code for the MCP server, custom tools, and agentic client as outlined in the prompt.
+Correctness: 0%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/server.py
+suggestions for improvement:
+- The code fulfills the basic requirement of creating a custom MCP server with tools. However, it lacks integration with external MCP servers as specified in the prompt. It also lacks the agentic client that discovers tools from both the local and external servers and uses an LLM for planning.
+- The code does not include any logic for LLM planning or orchestration. It needs to incorporate an LLM (GroqCloud or Ollama) to plan multi-step calls across all tools.
+- The code does not include discovery or registration of external servers. The prompt requested the composition of the custom server with two external MCP servers from part 1 of the assignment.
+- Consider adding input validation to the save_note function to prevent potential issues with filename sanitization.
+- Implement proper error handling and logging for better debugging and monitoring.
+Correctness: 60%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part2/test_notes.py
+suggestions for improvement:
+- Checker failed to provide a response.
+Correctness: N/A%
+-----

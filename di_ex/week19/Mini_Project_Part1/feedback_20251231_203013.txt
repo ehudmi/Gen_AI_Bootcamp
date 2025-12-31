@@ -1,0 +1,20 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part1/app.py
+suggestions for improvement:
+- Consider adding error handling for server connection failures.
+- Implement logging for tool calls, as suggested in the requirements.
+- Make the LLM backend configurable via environment variables for reproducibility.
+Correctness: 100%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part1/client.py
+suggestions for improvement:
+- Consider adding basic error handling for server connection failures, e.g., retries with exponential backoff or fallback to a default configuration.
+- Implement more robust error handling within the `chat` function, specifically around tool execution. Catch exceptions, log them, and potentially allow the LLM to choose a different tool or strategy.
+- Implement Observability requirements using a logging framework (e.g., `logging` module) rather than just `print` statements for more structured and configurable logging.
+Correctness: 90%
+-----
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week19/Mini_Project_Part1/requirements.txt
+suggestions for improvement:
+- The provided code snippet only includes package requirements (e.g., groq==1.0.0). It does not contain any code that implements the functionalities described in the Chapter Content/Questions.
+- The prompt requires the creation of an agentic application integrating third-party MCP servers, orchestration with an LLM, error handling, observability, and configuration. The provided snippet does not address any of these requirements.
+Correctness: 0.0%
+-----
