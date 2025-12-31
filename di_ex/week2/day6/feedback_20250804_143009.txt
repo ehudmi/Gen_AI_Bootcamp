@@ -1,0 +1,12 @@
+URL: https://github.com/ehudmi/Gen_AI_Bootcamp/blob/main/di_ex/week2/day6/daily_challenge.py
+suggestions for improvement:
+- The `get_info` method's output doesn't perfectly match the example's formatting.  The example has column alignment that isn't replicated. Consider using f-strings and string formatting techniques to better align the output.
+- The `add_animal` method has a small inaccuracy; it increments the count by 1 instead of the given `count` if the animal already exists.  Change `self.animals[animal_type] += 1` to `self.animals[animal_type] += count`
+- The `get_short_info` method's logic for adding 's' to animal names is a bit convoluted and could be simplified. A more concise approach would improve readability.
+- Add docstrings to methods for better clarity.
+Brief justification:
+- correctness: The code largely fulfills the requirements.  The `Farm` class, `__init__`, `add_animal`, and `get_info` methods are implemented and functional. The bonus features (`get_animal_types` and `get_short_info`) are also added. However, the output formatting in `get_info` and the logic in `add_animal` and `get_short_info` have minor issues, preventing a perfect score. These issues directly relate to the chapter content on string formatting, list manipulation, and methods. 
+- readability: The code is generally readable, but some parts could be improved.  The logic in `get_short_info` is a bit complex, making it harder to understand at a glance.  Adding docstrings and using more descriptive variable names would enhance readability.
+- performance: The code's performance is good for this task.  The algorithms used are efficient, and there are no obvious performance bottlenecks.  The use of dictionaries for animal storage is efficient for lookups and updates. The `sorted()` function is used appropriately for sorting animal types.
+- security: There are no apparent security vulnerabilities in the provided code. It deals only with internal data structures and doesn't interact with external sources that could introduce security risks.
+
